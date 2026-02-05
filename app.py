@@ -1,4 +1,17 @@
-from src.logger import logging
+from src.mlproject.logger import logging
+from src.mlproject.exception import CustomException
+import sys
+from src.mlproject.components.data_ingestion import DataIngestion
+from src.mlproject.components.data_ingestion import DataIngestionconfig
+
 
 if __name__=="__main__":
     logging.info("Logging has started")
+
+    try:
+        # data_ingestion_config=DataIngestionconfig()
+        data_ingestion=DataIngestion()
+        data_ingestion.initiate_data_ingestion()
+    except Exception as e:
+        logging.info("Custom Exception")
+        raise CustomException(e,sys)

@@ -8,6 +8,9 @@ project_name="mlproject"
 
 list_of_file = [
     f"src/{project_name}/__init__.py",
+    f"src/{project_name}/custom_logger.py",
+    f"src/{project_name}/exception.py",
+    f"src/{project_name}/utils.py",
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/components/data_ingestion.py",
     f"src/{project_name}/components/data_transformation.py",
@@ -16,9 +19,6 @@ list_of_file = [
     f"src/{project_name}/pipeline/__init__.py",
     f"src/{project_name}/pipeline/training_pipeline.py",
     f"src/{project_name}/pipeline/prediction_pipeline.py",
-    f"src/{project_name}/custom_logger.py",
-    f"src/{project_name}/exception.py",
-    f"src/{project_name}/utils.py",
     "app.py",
     "Dockerfile",
     "requirements.txt",
